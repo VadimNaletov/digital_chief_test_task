@@ -1,0 +1,76 @@
+// GET /api/asia - Получить все регионы Азии:
+GET http://localhost:8080/api/asia
+
+// GET /api/national-dish - Получить все национальные блюда:
+GET http://localhost:8080/api/national-dish
+
+// POST /api/asia - Создать новый регион Азии:
+POST http://localhost:8080/api/asia
+Content-Type: application/json
+
+{
+  "regionName": "Китай",
+  "area": 9.597,
+  "population": 1400,
+  "climate": "Умеренный",
+  "languagesSpoken": "Китайский"
+}
+
+// POST /api/national-dish - Создать новое национальное блюдо:
+POST http://localhost:8080/api/national-dish
+Content-Type: application/json
+
+{
+  "asiaId": 1,
+  "dishName": "Пекинская утка",
+  "originCountry": "Китай",
+  "ingredients": "Утка, мед, соевый соус, имбирь, лук",
+  "description": "Традиционное китайское блюдо, готовимое из тушки утки",
+  "popularity": 9
+}
+
+// PUT /api/asia/{id} - Обновить данные региона Азии по его идентификатору:
+PUT http://localhost:8080/api/asia/1
+Content-Type: application/json
+
+{
+  "regionName": "Индия",
+  "area": 3.287,
+  "population": 1380,
+  "climate": "Тропический",
+  "languagesSpoken": "Хинди"
+}
+
+// PUT /api/national-dish/{id} - Обновить данные национального блюда по его идентификатору:
+PUT http://localhost:8080/api/national-dish/1
+Content-Type: application/json
+
+{
+  "asiaId": 2,
+  "dishName": "Том Ям",
+  "originCountry": "Таиланд",
+  "ingredients": "Кокосовое молоко, лемонграсс, галангал, листы лайма, острый перец, креветки",
+  "description": "Пикантное тайское блюдо с креветками и ароматными травами",
+  "popularity": 8
+}
+
+// DELETE /api/asia/{id} - Удалить регион Азии по его идентификатору:
+DELETE http://localhost:8080/api/asia/1
+
+// DELETE /api/asia - Удалить все регионы Азии:
+DELETE http://localhost:8080/api/asia
+
+// DELETE /asia/{id} - удаление региона Азии по указанному идентификатору:
+DELETE http://localhost:8080/api/asia/12345
+
+// DELETE /asia - удаление всех регионов Азии:
+DELETE http://localhost:8080/api/asia
+
+// DELETE /national-dish/{id} - удаление национального блюда по указанному идентификатору:
+DELETE http://localhost:8080/api/national-dish/54321
+
+// DELETE /national-dish - удаление всех национальных блюд:
+DELETE http://localhost:8080/api/national-dish
+
+
+
